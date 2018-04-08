@@ -1,0 +1,184 @@
+﻿.main-nav li .glyphicon {
+    margin-right: 10px;
+}
+
+.main-nav li a.active,
+.main-nav li a.active:hover,
+.main-nav li a.active:focus {
+    background-color: #4189C7;
+    color: white;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+.m-5 {
+    margin: 5px;
+}
+
+.heroes {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+}
+
+    .heroes li {
+        position: relative;
+        cursor: pointer;
+        background-color: #EEE;
+        margin: .5em;
+        padding: .3em 0;
+        height: 1.6em;
+        border-radius: 4px;
+    }
+
+        .heroes li:hover {
+            color: #607D8B;
+            background-color: #DDD;
+            left: .1em;
+        }
+
+    .heroes a {
+        color: #888;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        width: 250px;
+    }
+
+        .heroes a:hover {
+            color: #607D8B;
+        }
+
+    .heroes .badge {
+        display: inline-block;
+        font-size: small;
+        color: white;
+        padding: 0.8em 0.7em 0 0.7em;
+        background-color: #607D8B;
+        line-height: 1em;
+        position: relative;
+        left: -1px;
+        top: -4px;
+        height: 1.8em;
+        min-width: 16px;
+        text-align: right;
+        margin-right: .8em;
+        border-radius: 4px 0 0 4px;
+    }
+
+    .heroes button {
+        background-color: #eee;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        cursor: hand;
+        font-family: Arial;
+    }
+
+        .heroes button:hover {
+            background-color: #cfd8dc;
+        }
+
+        .heroes button.delete {
+            position: relative;
+            left: 194px;
+            top: -32px;
+            background-color: gray !important;
+            color: white;
+        }
+
+
+@media (max-width: 767px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-nav {
+        height: 100%;
+        width: calc(25% - 20px);
+    }
+
+        .main-nav .navbar {
+            border-radius: 0px;
+            border-width: 0px;
+            height: 100%;
+        }
+
+        .main-nav .navbar-header {
+            float: none;
+        }
+
+        .main-nav .navbar-collapse {
+            border-top: 1px solid #444;
+            padding: 0px;
+        }
+
+        .main-nav .navbar ul {
+            float: none;
+        }
+
+        .main-nav .navbar li {
+            float: none;
+            font-size: 15px;
+            margin: 6px;
+        }
+
+            .main-nav .navbar li a {
+                padding: 10px 16px;
+                border-radius: 4px;
+            }
+
+        .main-nav .navbar a {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+}
+
+/* 
+    Temporary workaround due to the <blazor-component> wrapper element. The wrapper element
+    will be eliminated in a future update, making this workaround unnecessary.
+*/
+.navbar-nav > li a {
+    color: #9d9d9d;
+    line-height: 20px;
+    position: relative;
+    display: block;
+}
+
+    .navbar-nav > li a:hover {
+        color: #fff;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    .navbar-nav > li a:focus {
+        text-decoration: none;
+    }
+
+.alert-survey {
+    color: #6a6969;
+    background-color: #e8e8e8;
+    border-color: #d3d3d3;
+    margin-top: 25px;
+}
+
+    .alert-survey a {
+        font-weight: bold;
+    }
+
+.p-5 {
+    padding: 5rem;
+}

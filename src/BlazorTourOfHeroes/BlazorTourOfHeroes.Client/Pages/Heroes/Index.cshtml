@@ -1,0 +1,48 @@
+﻿@page "/heroes"
+@inherits IndexModel
+
+<h1>My Heroes</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <br />
+        @if (Model == null)
+        {
+            <div>Loading heroes ...</div>
+        }
+        else
+        {
+            <ul class="list-group">
+                @foreach (var hero in Model)
+                {
+                    <li class="clearfix list-group-item list-group-item-info m-5" style="padding-bottom:0px;">
+                        <div class="pull-left" style="padding-top:5px">
+                            <span class="badge">@hero.Id</span>
+                            <a href="/heroes/detail/@hero.Id">@hero.Name</a>
+                        </div>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-link" title="delete hero" @onclick(async () => await OnHeroDelete(hero.Id))>
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </div>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+    <div class="col-md-offset-1 col-md-4">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Add a Hero</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Hero" aria-describedby="sizing-addon1" @bind(Name) />
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-primary" @onclick(async () => await OnHeroCreate())>Add</button>
+            </div>
+        </div>
+    </div>
+</div>

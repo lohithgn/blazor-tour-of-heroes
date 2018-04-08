@@ -1,0 +1,65 @@
+﻿@page "/"
+@inherits IndexModel
+
+<h1>Top Heroes</h1>
+<br />
+<br />
+<div class="row">
+    @if (Heroes == null)
+    {
+        <div class="col-md-12">Loading heroes...</div>
+    }
+    else
+    {
+        foreach (var item in Heroes)
+        {
+            <div class="col-md-3">
+                <div class="well well-lg center-block">
+                    <div>
+                        <h3>
+                            <a href="/heroes/detail/@item.Id">
+                                <span class="glyphicon glyphicon-user"></span>  @item.Name
+                            </a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+<br />
+<br />
+<h1>Search Heroes</h1>
+<div class="row">
+    <div class="col-md-4">
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon" id="search-addon1">
+                <span class="glyphicon glyphicon-search"></span>
+            </span>
+            <input type="text" class="form-control" placeholder="Hero" aria-describedby="search-addon1" @bind(SearchCriteria)>
+        </div>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-lg btn-primary" @onclick(SearchHeroes)>Search</button>
+    </div>
+</div>
+<br />
+<br />
+<div class="row">
+    <div class="col-md-6">
+
+        @if (SearchResults != null)
+        {
+            <ul class="list-group">
+                @foreach (var item in SearchResults)
+                {
+                    <li class="list-group-item">
+                        <a href="/heroes/detail/@item.Id">
+                            <h4><span class="glyphicon glyphicon-user"></span> @item.Name </h4>
+                        </a>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+</div>

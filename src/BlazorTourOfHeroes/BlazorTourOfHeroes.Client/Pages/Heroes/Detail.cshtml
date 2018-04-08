@@ -1,0 +1,41 @@
+﻿@page "/heroes/detail/{HeroID}"
+@inherits DetailModel
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Details</h1>
+    </div>
+</div>
+
+@if (Model != null)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Hero: @Model.Name</h2>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <h4>ID : @Model.Id</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Name:</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <input class="form-control" type="text" name="txtName" @bind(Model.Name) />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-3">
+            <button class="btn btn-default" @onclick(GoBack)>Go Back</button> 
+            <button class="btn btn-primary" @onclick(UpdateHero)>Save</button>
+        </div>
+    </div>
+}
