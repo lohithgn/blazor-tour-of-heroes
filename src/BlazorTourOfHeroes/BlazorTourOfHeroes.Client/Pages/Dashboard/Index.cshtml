@@ -36,11 +36,11 @@
             <span class="input-group-addon" id="search-addon1">
                 <span class="glyphicon glyphicon-search"></span>
             </span>
-            <input type="text" class="form-control" placeholder="Hero" aria-describedby="search-addon1" @bind(SearchCriteria)>
+            <input type="text" class="form-control" placeholder="Hero" aria-describedby="search-addon1" bind="@SearchCriteria" />
         </div>
     </div>
     <div class="col-md-1">
-        <button class="btn btn-lg btn-primary" @onclick(SearchHeroes)>Search</button>
+        <button class="btn btn-lg btn-primary" onclick="@SearchHeroes">Search</button>
     </div>
 </div>
 <br />

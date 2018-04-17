@@ -21,7 +21,7 @@
                             <a href="/heroes/detail/@hero.Id">@hero.Name</a>
                         </div>
                         <div class="pull-right">
-                            <button type="button" class="btn btn-link" title="delete hero" @onclick(async () => await OnHeroDelete(hero.Id))>
+                            <button type="button" class="btn btn-link" title="delete hero" onclick="@(async () => await OnHeroDelete(hero.Id))">
                                 <span class="glyphicon glyphicon-trash"></span>
                             </button>
                         </div>
@@ -38,10 +38,10 @@
         </div>
         <div class="row">
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="Hero" aria-describedby="sizing-addon1" @bind(Name) />
+                <input type="text" class="form-control" placeholder="Hero" aria-describedby="sizing-addon1" bind="@Name" />
             </div>
             <div class="col-sm-2">
-                <button class="btn btn-primary" @onclick(async () => await OnHeroCreate())>Add</button>
+                <button class="btn btn-primary" onclick="@(async () => await OnHeroCreate())">Add</button>
             </div>
         </div>
     </div>

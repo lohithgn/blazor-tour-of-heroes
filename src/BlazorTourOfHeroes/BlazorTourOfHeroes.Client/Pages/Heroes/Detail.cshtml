@@ -28,14 +28,14 @@
     </div>
     <div class="row">
         <div class="col-md-3">
-            <input class="form-control" type="text" name="txtName" @bind(Model.Name) />
+            <input class="form-control" type="text" name="txtName" bind="@Model.Name" />
         </div>
     </div>
     <br />
     <div class="row">
         <div class="col-md-3">
-            <button class="btn btn-default" @onclick(GoBack)>Go Back</button> 
-            <button class="btn btn-primary" @onclick(UpdateHero)>Save</button>
+            <button class="btn btn-default" onclick="@GoBack">Go Back</button> 
+            <button class="btn btn-primary" onclick="@UpdateHero">Save</button>
         </div>
     </div>
 }
