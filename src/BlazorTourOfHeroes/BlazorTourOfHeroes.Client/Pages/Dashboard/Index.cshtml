@@ -14,13 +14,13 @@
         foreach (var item in Heroes)
         {
             <div class="col-md-3">
-                <div class="well well-lg center-block">
-                    <div>
-                        <h3>
+                <div class="card bg-light mb-3 text-center">
+                    <div class="card-body">
+                        <p>
                             <a href="/heroes/detail/@item.Id">
-                                <span class="glyphicon glyphicon-user"></span>  @item.Name
+                                <h3><span class="oi oi-person"></span>  @item.Name</h3>
                             </a>
-                        </h3>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -33,10 +33,12 @@
 <div class="row">
     <div class="col-md-4">
         <div class="input-group input-group-lg">
-            <span class="input-group-addon" id="search-addon1">
-                <span class="glyphicon glyphicon-search"></span>
-            </span>
-            <input type="text" class="form-control" placeholder="Hero" aria-describedby="search-addon1" bind="@SearchCriteria" />
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="hero-search">
+                    <span class="oi oi-magnifying-glass"></span>
+                </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Hero" aria-label="Hero Search" aria-describedby="hero-search" bind="@SearchCriteria" />
         </div>
     </div>
     <div class="col-md-1">
@@ -55,7 +57,7 @@
                 {
                     <li class="list-group-item">
                         <a href="/heroes/detail/@item.Id">
-                            <h4><span class="glyphicon glyphicon-user"></span> @item.Name </h4>
+                            <h4><span class="oi oi-person"></span> @item.Name </h4>
                         </a>
                     </li>
                 }

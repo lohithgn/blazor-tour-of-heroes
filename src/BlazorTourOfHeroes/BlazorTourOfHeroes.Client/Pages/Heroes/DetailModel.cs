@@ -16,7 +16,8 @@ namespace BlazorTourOfHeroes.Client.Pages.Heroes
 
         public Hero Model { get; set; }
 
-        public string HeroID { get; set; }
+        [Parameter]
+        string HeroID { get; set; }
 
         protected override async Task OnInitAsync()
         {
