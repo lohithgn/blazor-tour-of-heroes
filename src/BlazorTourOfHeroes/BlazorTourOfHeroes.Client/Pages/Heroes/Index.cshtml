@@ -1,39 +1,41 @@
 ﻿@page "/heroes"
 @inherits IndexModel
 
-<h1>My Heroes</h1>
+
 
 <div class="row">
     <div class="col-md-4">
-        <br />
+        <h1>My Heroes</h1>
+
         @if (Model == null)
         {
             <div>Loading heroes ...</div>
         }
         else
         {
-            <ul class="list-group">
-                @foreach (var hero in Model)
-                {
-                    <li class="clearfix list-group-item list-group-item-info m-5" style="padding-bottom:0px;">
-                        <div class="pull-left" style="padding-top:5px">
-                            <span class="badge">@hero.Id</span>
+            @foreach (var hero in Model)
+            {
+                <div class="card bg-light mb-2">
+                    <div class="card-body">
+                        <div class="float-left" >
+                            <span class="badge badge-info">@hero.Id</span>
                             <a href="/heroes/detail/@hero.Id">@hero.Name</a>
                         </div>
-                        <div class="pull-right">
-                            <button type="button" class="btn btn-link" title="delete hero" onclick="@(async () => await OnHeroDelete(hero.Id))">
-                                <span class="glyphicon glyphicon-trash"></span>
+                        <div class="float-right">
+                            <button type="button" class="btn btn-link p-0" title="delete hero" onclick="@(async () => await OnHeroDelete(hero.Id))">
+                                <span class="oi oi-trash"></span>
                             </button>
                         </div>
-                    </li>
-                }
-            </ul>
+                    </div>
+                </div>
+            }
+                
         }
     </div>
     <div class="col-md-offset-1 col-md-4">
         <div class="row">
             <div class="col-sm-12">
-                <h3>Add a Hero</h3>
+                <h1>Add a Hero</h1>
             </div>
         </div>
         <div class="row">
