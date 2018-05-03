@@ -14,3 +14,16 @@ To get setup with Blazor:
 
 Clone or download this git repo. Open BlazorTourOfHeroes.sln. 
 
+## Screenshots
+
+#### Home page
+![Tour of Heroes Home Page](https://raw.githubusercontent.com/lohithgn/blazor-tour-of-heroes/master/assets/index.png "Tour of Heroes Home Page")
+
+#### Search Hero
+![Search Hero](https://raw.githubusercontent.com/lohithgn/blazor-tour-of-heroes/master/assets/search.png "Search Hero")
+
+#### Hero Listing
+![Hero Listing](https://raw.githubusercontent.com/lohithgn/blazor-tour-of-heroes/master/assets/herolisting.png "Hero Listing")
+
+#### Editing Hero
+![Editing Hero](https://raw.githubusercontent.com/lohithgn/blazor-tour-of-heroes/master/assets/heroedit.png "Editing Hero")
