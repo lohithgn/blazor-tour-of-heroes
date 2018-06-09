@@ -9,10 +9,20 @@
     <link href="css/site.css" rel="stylesheet" />
 </head>
 <body>
-    <app>Loading...</app>
+    <app>
+        <div class="container d-flex justify-content-center align-items-center" style="height:500px">
+            <div>
+                <h1>Blazor Tour of Heroes</h1>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </app>
 
     <script src="css/bootstrap/bootstrap-native.min.js"></script>
-    <script type="blazor-boot"></script>
+    <script type="blazor-boot">
+    </script>
     <script src="js/site.js"></script>
     <script>
         Blazor.registerFunction('goBack', () => {
