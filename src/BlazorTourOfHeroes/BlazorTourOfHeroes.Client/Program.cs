@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Blazor.Browser.Rendering;
 using Microsoft.AspNetCore.Blazor.Browser.Services;
-using System;
 using Microsoft.Extensions.DependencyInjection;
 using BlazorTourOfHeroes.Client.Services;
 
