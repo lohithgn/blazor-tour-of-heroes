@@ -1,10 +1,7 @@
 ﻿using BlazorTourOfHeroes.Client.Services;
 using BlazorTourOfHeroes.Shared;
-using Microsoft.AspNetCore.Blazor.Browser.Interop;
 using Microsoft.AspNetCore.Blazor.Components;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.JSInterop;
 using System.Threading.Tasks;
 
 namespace BlazorTourOfHeroes.Client.Pages.Heroes
@@ -13,7 +10,7 @@ namespace BlazorTourOfHeroes.Client.Pages.Heroes
     {
         [Inject]
         private HeroesServiceClient _client { get; set; }
-
+        
         public Hero Model { get; set; }
 
         [Parameter]
@@ -26,7 +23,7 @@ namespace BlazorTourOfHeroes.Client.Pages.Heroes
 
         protected void GoBack()
         {
-            RegisteredFunction.Invoke<bool>("goBack");
+            JSRuntime.Current.InvokeAsync<bool>("tourOfHeroesFunctions.goBack");
         }
 
         protected async void UpdateHero()

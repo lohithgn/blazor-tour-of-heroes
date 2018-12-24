@@ -21,14 +21,15 @@
     </app>
 
     <script src="css/bootstrap/bootstrap-native.min.js"></script>
-    <script type="blazor-boot">
-    </script>
+    <script src="_framework/blazor.webassembly.js"></script>
     <script src="js/site.js"></script>
     <script>
-        Blazor.registerFunction('goBack', () => {
-            window.history.back();
-            return true;
-        });
+        window.tourOfHeroesFunctions = {
+            goBack: function () {
+                window.history.back();
+                return true;
+            }
+        };
     </script>
 </body>
 </html>
